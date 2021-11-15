@@ -98,7 +98,7 @@ The public server URL: `wss://router-lite.voiceping.net`
 ## Self-hosted server
 
 If you need to self-hosted the server, you can find more documentation on the server repo: 
-* [voiceover-server](https://github.com/SmartWalkieOrg/voiceover-server)(This is the repo server, uses VoicePing.js)
+* [voiceover-server](https://github.com/SmartWalkieOrg/voiceover-server) (This is the repo server, uses VoicePing.js)
 * [VoicePing.js](https://github.com/SmartWalkieOrg/VoicePing.js) (This is the library)
 
 ## Maintainers
