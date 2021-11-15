@@ -27,7 +27,7 @@ VoicePing Walkie Talkie Android SDK works together with <span style="text-decora
 You can test our sample app here: [Google play download link]. The sample app is connected to group channel 1234 and allows you to test the Walkie Talkie function. 
 
 
-## How simple is it to add VoicePing SDK to your app?**
+## How simple is it to add VoicePing SDK to your app?
 
 <center><a href="https://www.voicepingapp.com" target="_blank"><img alt="SDK in your app" src="https://i.ibb.co/jzbbcbx/Group-4-1.png" title="This is a sample how the SDK will look like in your app" /></a></center>
 
