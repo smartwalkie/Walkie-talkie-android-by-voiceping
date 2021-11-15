@@ -207,4 +207,4 @@ If you would like help on server setup, maintenance, customization, please reach
 
 ## Footnote
 
-[1] time between someone talks in a device until the other hears the audio on another device
+[1] Latency: time between someone talks in a device until the other hears the audio on another device
