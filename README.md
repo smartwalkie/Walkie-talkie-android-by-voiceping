@@ -1,4 +1,9 @@
 # Walkie Talkie/Push To Talk Android SDK for your Chat Apps
+<br />  
+
+<center><a href="https://www.voicepingapp.com" target="_blank"><img alt="VoicePing SDK Banner" src="https://i.ibb.co/9pKKf4J/Group-2.png" title="VoicePing SDK Banner" /></a></center>
+
+<br /><br />
 1. Need to add walkie talkie or push-to-talk functionality to your Android app?
 2. Worry no more, you can add it quickly with VoicePing Android SDK that works with VoicePing Open Source Router.
 3. Simple integration, customizable, and free! What are you waiting for? 🎉
