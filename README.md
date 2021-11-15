@@ -5,6 +5,7 @@
 
 VoicePing Walkie Talkie Android SDK works together with <span style="text-decoration:underline;"> VoicePing Open Source Router</span> to allow you to quickly add group voice broadcast capability to your app. The Android SDK comes with a reference Android App with UI that demonstrates the one button Push-To-Talk interface.  
 
+
 ## Features of VoicePing Walkie Talkie Push-to-Talk (PTT) Android SDK
 1. Easy to integrate to your app; 5 lines of code is all it takes
 2. Low data consumption suitable for Mobile Devices: Opus Codec, defined as 16Khz, 60ms Frame size. ~300KB per 1 minute of speech. 
