@@ -12,11 +12,11 @@ VoicePing Walkie Talkie Android SDK works together with <span style="text-decora
   
   
 ## Features of VoicePing Walkie Talkie Push-to-Talk (PTT) Android SDK
-1. Easy to integrate to your app; 5 lines of code is all it takes
+1. Easy to integrate to your app
 2. Low data consumption suitable for Mobile Devices: Opus Codec, defined as 16Khz, 60ms Frame size. ~300KB per 1 minute of speech. 
 3. Works over all network conditions (2G, 3G, 4G or Wifi) 
 4. Auto-reconnect feature when Internet connection is lost
-5. Uses WebSecure Socket for transport
+5. Uses secure WebSocket for transport
 6. Works for Android SDK (16 to 30) and Android OS version 4.1 to 11
 7. Low battery consumption  
   
@@ -50,9 +50,6 @@ We have got it covered. You can customize it.
 
 Build it with Android Studio and test on your device.
 
-What you will need to integrate to your code is only 5 lines below.
-
-
 
 1. Connect to the VoicePing server.
 ```
@@ -60,20 +57,86 @@ VoicePing.init(appContext, “VP_ROUTER_URL”, "COMPANY_NAME")
 VoicePing.connect(“USER ID”, callback)
 ```
 
-
-
 2. Now join the clients to the same channel (group), then they can talk to each other.
 ```
 VoicePing.joinGroup(“GROUP_ID”, callback)
 ```
-
-
 
 3. To start and stop the PTT (which you can then hook with user events like click and release or something else):
 ```
 VoicePing.startTalking(context, “GROUP_ID”)
 VoicePing.stopTalking(context)
 ```
+
+
+
+## Steps to use VoicePing Android SDK
+
+1. Initialize
+
+Initialize VoicePing in your Application code, inside onCreate method
+
+```kotlin
+class VoicePingClientApp : Application() {
+    override fun onCreate() {
+        super.onCreate()
+        VoicePing.init(this, "voiceping_sdk_server_url")
+    }
+}
+```
+
+2. Connect
+
+Before you can start talking using PTT, you need connect to server. You can do that by call connect
+method from VoicePing instance.
+
+```kotlin
+VoicePing.connect("your_user_id", object : ConnectCallback {
+    override fun onConnected() {
+        // Do something
+    }
+
+    override fun onFailed(exception: VoicePingException) {
+        // Do something
+    }
+})
+```
+
+3. Start Talking
+
+After successfully connected, you can now start talking. You can start talking to individual
+receiver using,
+
+```kotlin
+VoicePing.startTalking("receiver_id", ChannelType.PRIVATE, this)
+```
+
+or in a group using,
+
+```kotlin
+VoicePing.startTalking("group_id", ChannelType.GROUP, this)
+```
+
+4. Stop Talking
+
+To stop talking, for both Private and Group PTT, you can use,
+
+```kotlin
+VoicePing.stopTalking()
+```
+
+5. Disconnect
+
+You can disconnect to stop receiving PTT by using,
+
+```kotlin
+VoicePing.disconnect(object : DisconnectCallback {
+    override fun onDisconnected() {
+        // Do something
+    }
+})
+```
+
 
 
 
