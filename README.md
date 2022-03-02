@@ -1,17 +1,20 @@
-# Walkie Talkie/Push To Talk Android SDK for your Chat Apps
+# VoicePing Android SDK
+
 <br />  
-
 <center><a href="https://www.voicepingapp.com" target="_blank"><img alt="VoicePing SDK Banner" src="https://i.ibb.co/9pKKf4J/Group-2.png" title="VoicePing SDK Banner" /></a></center>
-
 <br /><br />
+
+## Walkie Talkie/Push To Talk Android SDK for your Chat Apps
+
 1. Need to add walkie talkie or push-to-talk functionality to your Android app?
 2. Worry no more, you can add it quickly with VoicePing Android SDK that works with VoicePing Open Source Router.
 3. Simple integration, customizable, and free! What are you waiting for? 🎉
 
-VoicePing Walkie Talkie Android SDK works together with <span style="text-decoration:underline;"> VoicePing Open Source Router</span> to allow you to quickly add group voice broadcast capability to your app. The Android SDK comes with a reference Android App with UI that demonstrates the one button Push-To-Talk interface.  
+VoicePing Android SDK works together with <span style="text-decoration:underline;"> VoicePing Open Source Router</span> to allow you to quickly add group voice broadcast capability to your app. The Android SDK comes with a reference Android App with UI that demonstrates the one button Push-To-Talk interface.  
   
   
-## Features of VoicePing Walkie Talkie Push-to-Talk (PTT) Android SDK
+## Features of VoicePing Android SDK
+
 1. Easy to integrate to your app
 2. Low data consumption suitable for Mobile Devices: Opus Codec, defined as 16Khz, 60ms Frame size. ~300KB per 1 minute of speech. 
 3. Works over all network conditions (2G, 3G, 4G or Wifi) 
@@ -36,7 +39,6 @@ You can test our sample app here: [Google play download link]. The sample app is
 
 <center><a href="https://www.voicepingapp.com" target="_blank"><img alt="SDK in your app" src="https://i.ibb.co/jzbbcbx/Group-4-1.png" title="This is a sample how the SDK will look like in your app" /></a></center>
 
-
 See those mic buttons?
 
 Yup, that button is the only thing you need to add to your app to have PTT functionality.
@@ -44,30 +46,6 @@ Yup, that button is the only thing you need to add to your app to have PTT funct
 But what if you don't want a mic button but another UI instead?
 
 We have got it covered. You can customize it.
-
-
-## Integrate walkie talkie sdk to your app
-
-Build it with Android Studio and test on your device.
-
-
-1. Connect to the VoicePing server.
-```
-VoicePing.init(appContext, “VP_ROUTER_URL”, "COMPANY_NAME")
-VoicePing.connect(“USER ID”, callback)
-```
-
-2. Now join the clients to the same channel (group), then they can talk to each other.
-```
-VoicePing.joinGroup(“GROUP_ID”, callback)
-```
-
-3. To start and stop the PTT (which you can then hook with user events like click and release or something else):
-```
-VoicePing.startTalking(context, “GROUP_ID”)
-VoicePing.stopTalking(context)
-```
-
 
 
 ## Steps to use VoicePing Android SDK
@@ -138,8 +116,6 @@ VoicePing.disconnect(object : DisconnectCallback {
 ```
 
 
-
-
 ## Customization
 
 You can customize the size, color, of the mic button.
@@ -160,7 +136,7 @@ You can also customize the shape of the mic button. Or you can have your own PTT
 
 VoicePing Android SDK needs a VoicePing server to work. You can test with our hosted server or you can have your own self hosted server later. You can look at this repo (coming soon: open source Router URL) to know how to self-host the server.
 
-The public server URL: `wss://router-lite.voiceping.net`
+The public server URL: `wss://router-lite.voiceping.info`
 
 
 ## Self-hosted server
@@ -169,11 +145,13 @@ If you need to self-hosted the server, you can find more documentation on the se
 * [voiceover-server](https://github.com/SmartWalkieOrg/voiceover-server) (This is the repo server, uses VoicePing.js)
 * [VoicePing.js](https://github.com/SmartWalkieOrg/VoicePing.js) (This is the library)
 
+
 ## Maintainers
+
 * [VoicePing team](https://www.voicepingapp.com/)
 
-## VoicePing Enterprise
 
+## VoicePing Enterprise
 
 VoicePing Enterprise is the full featured closed source version with support. More features available are [https://www.voicepingapp.com](https://www.voicepingapp.com). You can try VoicePing on:
 
