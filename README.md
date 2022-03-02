@@ -48,7 +48,7 @@ But what if you don't want a mic button but another UI instead?
 We have got it covered. You can customize it.
 
 
-## Steps to use VoicePing Android SDK
+## How to use VoicePing Android SDK
 
 1. Initialize
 
@@ -69,7 +69,7 @@ Before you can start talking using PTT, you need connect to server. You can do t
 method from VoicePing instance.
 
 ```kotlin
-VoicePing.connect("your_user_id", object : ConnectCallback {
+VoicePing.connect("your_user_id", "your_company", object : ConnectCallback {
     override fun onConnected() {
         // Do something
     }
@@ -113,6 +113,40 @@ VoicePing.disconnect(object : DisconnectCallback {
         // Do something
     }
 })
+```
+
+6. Join a group
+
+You cannot listen to a group channel before joining it. To join a group channel, you can use,
+
+```kotlin
+VoicePing.joinGroup("group_id")
+```
+
+7. Leave a group
+
+To leave a group channel, you can use,
+
+```kotlin
+VoicePing.leaveGroup("group_id")
+```
+
+8. Mute from specific channel
+
+To mute from specific channel, you can use,
+
+```kotlin
+VoicePing.mute("target_id", ChannelType.PRIVATE)
+// or ChannelType.GROUP if you want to target group
+```
+
+9. Unmute to specific channel
+
+To unmute to specific channel, you can use,
+
+```kotlin
+VoicePing.unmute("target_id", ChannelType.PRIVATE)
+// or ChannelType.GROUP if you want to target group
 ```
 
 
