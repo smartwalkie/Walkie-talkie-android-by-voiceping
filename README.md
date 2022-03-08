@@ -32,7 +32,7 @@ VoicePing Android SDK works together with <span style="text-decoration:underline
 4. For Chat Apps, allow some users to send instant voice messages that do not need to be manually played. 
 
 ## Get Started
-You can test our sample app here: [Google play download link]. The sample app is connected to group channel 1234 and allows you to test the Walkie Talkie function. 
+You can test our sample app here: [Google play download link]. The sample app allows you to test the Walkie Talkie function. Input any user ID and company name. Devices should have same company name to be able to communicate, but different user ID.
 
 
 ## How simple is it to add VoicePing SDK to your app?
@@ -65,7 +65,7 @@ class VoicePingClientApp : Application() {
 
 2. Connect
 
-Before you can start talking using PTT, you need connect to server. You can do that by call connect
+Before you can start talking, you need connect to server. You can do that by call connect
 method from VoicePing instance.
 
 ```kotlin
@@ -83,21 +83,22 @@ VoicePing.connect("your_user_id", "your_company", object : ConnectCallback {
 3. Start Talking
 
 After successfully connected, you can now start talking. You can start talking to individual
-receiver using,
+receiver using:
 
 ```kotlin
 VoicePing.startTalking("receiver_id", ChannelType.PRIVATE, this)
 ```
 
-or in a group using,
+or in a group using:
 
 ```kotlin
 VoicePing.startTalking("group_id", ChannelType.GROUP, this)
-```
+```  
+Before you can talk in a group, you need to join a group first, please look at item 6 below.
 
 4. Stop Talking
 
-To stop talking, for both Private and Group PTT, you can use,
+To stop talking, for both Private and Group PTT:
 
 ```kotlin
 VoicePing.stopTalking()
@@ -105,7 +106,7 @@ VoicePing.stopTalking()
 
 5. Disconnect
 
-You can disconnect to stop receiving PTT by using,
+You can disconnect to stop receiving PTT:  
 
 ```kotlin
 VoicePing.disconnect(object : DisconnectCallback {
@@ -117,7 +118,7 @@ VoicePing.disconnect(object : DisconnectCallback {
 
 6. Join a group
 
-You cannot listen to a group channel before joining it. To join a group channel, you can use,
+You cannot listen to a group channel before joining it. To join a group channel:
 
 ```kotlin
 VoicePing.joinGroup("group_id")
@@ -125,24 +126,24 @@ VoicePing.joinGroup("group_id")
 
 7. Leave a group
 
-To leave a group channel, you can use,
+To leave a group channel:
 
 ```kotlin
 VoicePing.leaveGroup("group_id")
 ```
 
-8. Mute from specific channel
+8. Mute specific channel
 
-To mute from specific channel, you can use,
+To mute specific channel:
 
 ```kotlin
 VoicePing.mute("target_id", ChannelType.PRIVATE)
 // or ChannelType.GROUP if you want to target group
 ```
 
-9. Unmute to specific channel
+9. Unmute specific channel
 
-To unmute to specific channel, you can use,
+To unmute specific channel:
 
 ```kotlin
 VoicePing.unmute("target_id", ChannelType.PRIVATE)
@@ -168,7 +169,7 @@ You can also customize the shape of the mic button. Or you can have your own PTT
 
 ## VoicePing server URL
 
-VoicePing Android SDK needs a VoicePing server to work. You can test with our hosted server or you can have your own self hosted server later. You can look at this repo (coming soon: open source Router URL) to know how to self-host the server.
+VoicePing Android SDK needs a VoicePing server to work. You can test with our hosted server or you can have your own self hosted server later. You can look [at this repo](https://github.com/SmartWalkieOrg/walkie-talkie-server) to know how to self-host the server.
 
 The public server URL: `wss://router-lite.voiceping.info`
 
