@@ -32,7 +32,9 @@ VoicePing Android SDK works together with <span style="text-decoration:underline
 4. For Chat Apps, allow some users to send instant voice messages that do not need to be manually played. 
 
 ## Get Started
-You can test our sample app here: [Google play download link]. The sample app allows you to test the Walkie Talkie function. Input any user ID and company name. Devices should have same company name to be able to communicate, but different user ID.
+You can test our sample app here: [Google play download link].  
+The sample app allows you to test the Walkie Talkie function.  
+Input any user ID and company name. Devices should have same company name to be able to communicate, but different user ID.
 
 
 ## How simple is it to add VoicePing SDK to your app?
@@ -63,6 +65,7 @@ class VoicePingClientApp : Application() {
 }
 ```
   
+  
 2. Connect
 
 Before you can start talking, you need connect to server. You can do that by call connect
@@ -80,6 +83,7 @@ VoicePing.connect("your_user_id", "your_company", object : ConnectCallback {
 })
 ```
   
+  
 3. Start Talking
 
 After successfully connected, you can now start talking. You can start talking to individual
@@ -96,6 +100,7 @@ VoicePing.startTalking("group_id", ChannelType.GROUP, this)
 ```  
 Before you can talk in a group, you need to join a group first, please look at item 6 below.
   
+  
 4. Stop Talking
 
 To stop talking, for both Private and Group PTT:
@@ -103,6 +108,7 @@ To stop talking, for both Private and Group PTT:
 ```kotlin
 VoicePing.stopTalking()
 ```
+  
   
 5. Disconnect
 
@@ -116,6 +122,7 @@ VoicePing.disconnect(object : DisconnectCallback {
 })
 ```
   
+  
 6. Join a group
 
 You cannot listen to a group channel before joining it. To join a group channel:
@@ -123,6 +130,7 @@ You cannot listen to a group channel before joining it. To join a group channel:
 ```kotlin
 VoicePing.joinGroup("group_id")
 ```
+  
   
 7. Leave a group
 
@@ -132,6 +140,7 @@ To leave a group channel:
 VoicePing.leaveGroup("group_id")
 ```
   
+  
 8. Mute specific channel
 
 To mute specific channel:
@@ -140,6 +149,7 @@ To mute specific channel:
 VoicePing.mute("target_id", ChannelType.PRIVATE)
 // or ChannelType.GROUP if you want to target group
 ```
+  
   
 9. Unmute specific channel
 
