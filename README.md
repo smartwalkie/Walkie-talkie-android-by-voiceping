@@ -62,7 +62,7 @@ class VoicePingClientApp : Application() {
     }
 }
 ```
-
+  
 2. Connect
 
 Before you can start talking, you need connect to server. You can do that by call connect
@@ -79,7 +79,7 @@ VoicePing.connect("your_user_id", "your_company", object : ConnectCallback {
     }
 })
 ```
-
+  
 3. Start Talking
 
 After successfully connected, you can now start talking. You can start talking to individual
@@ -95,7 +95,7 @@ or in a group using:
 VoicePing.startTalking("group_id", ChannelType.GROUP, this)
 ```  
 Before you can talk in a group, you need to join a group first, please look at item 6 below.
-
+  
 4. Stop Talking
 
 To stop talking, for both Private and Group PTT:
@@ -103,7 +103,7 @@ To stop talking, for both Private and Group PTT:
 ```kotlin
 VoicePing.stopTalking()
 ```
-
+  
 5. Disconnect
 
 You can disconnect to stop receiving PTT:  
@@ -115,7 +115,7 @@ VoicePing.disconnect(object : DisconnectCallback {
     }
 })
 ```
-
+  
 6. Join a group
 
 You cannot listen to a group channel before joining it. To join a group channel:
@@ -123,7 +123,7 @@ You cannot listen to a group channel before joining it. To join a group channel:
 ```kotlin
 VoicePing.joinGroup("group_id")
 ```
-
+  
 7. Leave a group
 
 To leave a group channel:
@@ -131,7 +131,7 @@ To leave a group channel:
 ```kotlin
 VoicePing.leaveGroup("group_id")
 ```
-
+  
 8. Mute specific channel
 
 To mute specific channel:
@@ -140,7 +140,7 @@ To mute specific channel:
 VoicePing.mute("target_id", ChannelType.PRIVATE)
 // or ChannelType.GROUP if you want to target group
 ```
-
+  
 9. Unmute specific channel
 
 To unmute specific channel:
@@ -176,7 +176,7 @@ The public server URL: `wss://router-lite.voiceping.info`
 
 ## Self-hosted server
 
-If you need to self-hosted the server, you can find more documentation on the server repo: 
+If you need to self-host the server, you can find more documentation on the server repo: 
 * [voiceover-server](https://github.com/SmartWalkieOrg/voiceover-server) (This is the repo server, uses VoicePing.js)
 * [VoicePing.js](https://github.com/SmartWalkieOrg/VoicePing.js) (This is the library)
 
