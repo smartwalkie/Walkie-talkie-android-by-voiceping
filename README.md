@@ -204,7 +204,7 @@ VoicePing Enterprise is the full featured closed source version with support. Mo
 * [VoicePing Android](https://play.google.com/store/apps/details?id=com.media2359.voiceping.store)
 * [VoicePing iOS](https://itunes.apple.com/us/app/voiceping/id1249953303?ls=1&mt=8)
 
-Join the same public channel ID and try PTT from the web to the Android/iOS app and vice versa. You will find VoicePing has very clear audio and low latency<sup>1</sup>.
+Join the same free channel ID and try PTT from the web to the Android/iOS app and vice versa. You will find VoicePing has very clear audio and low latency<sup>1</sup>.
 
 VoicePing Enterprise has more features than VoicePing Open Source which can be found here: https://www.voicepingapp.com/blog/design-a-stunning-blog
 
