@@ -32,7 +32,7 @@ VoicePing Android SDK works together with <span style="text-decoration:underline
 4. For Chat Apps, allow some users to send instant voice messages that do not need to be manually played. 
 
 ## Get Started
-You can test our sample app here: [Google play download link].  
+You can test our sample app here: [Download VP Demo app](https://drive.google.com/file/d/1fndt00DQfip5Tem-UNB0WMsLqSB6Wier/view?usp=sharing).  
 The sample app allows you to test the Walkie Talkie function.  
 Input any user ID and company name. Devices should have same company name to be able to communicate, but different user ID.
 
